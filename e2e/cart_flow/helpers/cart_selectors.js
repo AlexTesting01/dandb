@@ -1,0 +1,8 @@
+export const SEARCH_INPUT = "#twotabsearchtextbox";
+export const ADD_TO_CART_BUTTON = "#add-to-cart-button";
+export const ADDED_TO_CART_TEXT = "Added to Cart";
+export const INCREASE_QUANTITY = "[aria-label*='Increase quantity']";
+export const DELETE_BUTTONS = ".sc-action-delete-active input";
+export const YGB_COLOR_ITEM = "//*[@alt='Yellow, Grey, Blue']//ancestor::span/input";
+export const CART_ITEM_IMAGE = "#sc-cart-column";
+export const CART_COUNT = "#nav-cart-count";

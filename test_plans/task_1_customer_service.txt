@@ -1,0 +1,53 @@
+Amazon Customer Service Test Plan
+
+✅ Scenario 1: Amazon Main Navigation Menu Validation
+
+Preconditions:
+
+    - The Amazon website is accessible via the specified URL.
+
+    - A stable internet connection is available.
+
+Test Case: Verify Main Menu Items on Homepage
+
+Steps:
+
+    1. Open Homepage: The test navigates to the Amazon homepage.
+
+    2. Locate Main Menu: The main navigation menu bar on the homepage is identified.
+
+    3. Validate Item Text: The text content of each visible item within the main navigation menu is then compared against a predefined list of expected main menu item names.
+
+    4. Assertion: The test passes if all identified main menu items precisely match their expected text content; otherwise, it fails.
+
+✅ Scenario 2: Amazon Customer Service - Track Package Flow
+
+Preconditions:
+
+    - The Amazon website is accessible via the specified URL.
+
+    - A stable internet connection is available.
+
+Test Case: Search for "Where is my stuff" and Validate Track Package Page
+
+Steps:
+
+    1. Open Homepage: The test navigates to the Amazon homepage.
+
+    2. Navigate to Customer Service: The "Customer Service" link within the main navigation menu is clicked.
+
+    3. Verify Customer Service Page Loaded:
+
+        - The current URL is verified to include the /gp/help/customer path.
+
+        - The "Welcome to Amazon Customer Service" heading is visible on the page.
+
+    4.Search for Inquiry:
+
+        - The text "Where is my stuff" is typed into the Customer Service search bar.
+
+        - The search is submitted.
+
+    5. Verify Search Results/Display Page: The current URL is verified to include the /gp/help/customer/display.html path.
+
+    6. Validate Quick Solutions: Specific quick solution items (e.g., "Track Your Package", "Find a Missing Item"), as defined by QUICK_SOLUTIONS, are verified to be visible on the page.

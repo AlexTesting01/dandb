@@ -1,0 +1,79 @@
+Amazon Cart Flow Test Plan
+
+✅ Scenario: Amazon Cart Management
+Overall Objective: To validate the core functionalities of adding, verifying, and managing items within the Amazon shopping cart.
+
+Preconditions:
+    Setup (Before Each Test Execution):
+        Before each test case runs, the shopping cart is populated with two specific items to provide a consistent starting state.
+
+        1. Add "Office Personal Electric Pencil Sharpener, Powerful Stall-Free Motor, High Capacity Shavings Tray, Blue" to Cart:
+
+            - The Amazon homepage is opened.
+
+            - "Office Personal Electric Pencil Sharpener, Powerful Stall-Free Motor, High Capacity Shavings Tray, Blue" is typed into the search bar, and the search is submitted.
+
+            - The first search result for this item is clicked to navigate to its product page.
+
+            - The "Add to Cart" button on the product page is clicked.
+
+            - A confirmation message indicating "Added to Cart" is verified to be present.
+
+        2. Add "Scissors" to Cart:
+
+            - The browser navigates directly to the "Scissors" product page via its full URL: https://www.amazon.com/Scissors-iBayam-Crafting-Scrapbooking-Knitting/dp/B07H3QKN2Z.
+
+            - The “Yellow, Grey, Blue” color option for the "Scissors" is selected.
+
+            - The "Add to Cart" button on the product page is clicked.
+
+            - A confirmation message indicating "Added to Cart" is verified to be present.
+
+    Cleanup (After Each Test Execution):
+        After each test case finishes, the shopping cart is emptied to ensure a clean slate for the next test.
+
+            1. The shopping cart page is visited.
+
+            2. All items in the cart are removed by repeatedly clicking the "Delete" buttons until no items remain.
+
+            3. The cart count icon is verified to display "0", confirming the cart is empty.
+
+Test Cases:
+
+    Test Case 1: Verify Both Products are in the Cart
+        Objective: To confirm that the previously added "Office Personal Electric Pencil Sharpener, Powerful Stall-Free Motor, High Capacity Shavings Tray, Blue" (identified by its brand, "Bostitch") and "Scissors" are correctly displayed within the shopping cart.
+            Steps:
+
+                1. The shopping cart page is visited.
+
+                2. The presence of "Bostitch" text is verified on the cart page.
+
+                3. The presence of "Scissors" text is verified on the cart page.
+
+    Test Case 2: Verify Cart content by Screenshot Comparing
+        Objective: To visually verify that the cart items appear as expected, using image comparison against a stored baseline.
+            Steps:
+
+                1. The shopping cart page is visited.
+
+                2. The test waits for the page to stabilize and content to load.
+
+                3. A screenshot of the cart content is captured.
+
+                4. This captured screenshot is then compared pixel-by-pixel with a pre-existing baseline image.
+
+                5.The test passes if the visual difference between the captured and baseline screenshot is within an acceptable threshold and diff count.
+
+    Test Case 3: Verify Free Shipping Availability After Adding More Items
+        Objective: To validate that the free shipping qualification status updates correctly in the cart when item quantities are increased after setting a specific delivery location.
+            Steps:
+
+                1. The shopping cart page is visited.
+
+                2. The global delivery location is updated to a specific ZIP code (e.g., "10001") that is known to enable free shipping conditions for qualifying orders.
+
+                3. Initially, the cart is verified to display a message prompting the user to "get FREE delivery" (implying the order does not yet qualify for free shipping).
+
+                4. Order 3 additional pencil sharpeners.
+
+                5. After the quantity update, the cart is verified to display a message explicitly stating "Your order qualifies for FREE Shipping."
