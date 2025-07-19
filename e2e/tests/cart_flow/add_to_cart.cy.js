@@ -10,12 +10,12 @@ import {
   YGB_COLOR_ITEM,
   CART_ITEM_IMAGE,
 } from "./helpers/cart_selectors.js";
-import { URL } from "../common/test_config.js";
+import { URL } from "../../common/test_config.js";
 import {
   clickUntilGone,
   compareScreenshots,
   openPage,
-} from "../utils/functionals.js";
+} from "../../utils/functionals.js";
 const SCREENSHOT_NAME = "cart_main_view";
 const FIRST_ITEM =
   "Office Personal Electric Pencil Sharpener, Powerful Stall-Free Motor, High Capacity Shavings Tray, Blue";

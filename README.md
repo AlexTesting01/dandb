@@ -18,13 +18,14 @@ cypress-task-amazon/
 │   ├── suites/
 │   │   ├── customer_service_suite.js    # Customer service suite
 │   │   └── cart_flow_suite.js           # Cart flow suite
-│   ├── customer_service/
-│   │   ├── main_menu.cy.js              # Main menu tests
-│   │   └── track_package.cy.js          # Track package tests
-│   ├── cart_flow/
-│   │   ├── add_to_cart.cy.js            # Cart management tests
+|   ├── tests/
+|   │   ├── customer_service/
+|   │   │   ├── main_menu.cy.js              # Main menu tests
+|   │   │   └── track_package.cy.js          # Track package tests
+|   │   └── cart_flow/
+|   │       └── add_to_cart.cy.js            # Cart management tests
 │   ├── common/
-│   │   └── test_config.js               # Shared constants
+│   │   └── test_config.js                   # Shared constants
 │   ├── utils/
 │   │   |── commands.js
 |   |   └── functionals.js              # Utility functions and custom Cypress commands

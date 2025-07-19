@@ -1,5 +1,5 @@
-import { URL, QUICK_SOLUTIONS } from "../common/test_config.js";
-import { openPage, openMainMenuItem, validateListItemsVisibility } from "../utils/functionals.js";
+import { URL, QUICK_SOLUTIONS } from "../../common/test_config.js";
+import { openPage, openMainMenuItem, validateListItemsVisibility } from "../../utils/functionals.js";
 
 describe("Amazon Customer Service - Track Package", () => {
   beforeEach(() => {
