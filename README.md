@@ -48,21 +48,20 @@ cypress-task-amazon/
 - **validateListItemsVisibility(element, itemsList)**: Asserts visibility of multiple items.
 - **compareScreenshots(selector, fileName)**:  
   - Takes a screenshot of a DOM element.
-  - Moves it to a custom folder.
   - Compares it to a baseline using a Cypress task and pixelmatch.
-  - Fails if the diff exceeds the threshold.
+  - Fails if doesn't match.
 
 ### Visual Regression
-- **Baseline screenshots**: Stored in `e2e/data/screenshots/`.
+- **Baseline screenshots**: Stored in `e2e/screenshots/`.
 - **Comparison logic**: Implemented as a Cypress task in `cypress.config.js` using `pixelmatch` and `pngjs`.
 
 ---
 
 ## How Visual Comparison Works
 
-1. **Screenshot**: Cypress takes a screenshot of a specific element and saves it to a custom folder.
+1. **Screenshot**: Cypress takes a screenshot of a specific element and saves it.
 2. **Compare**: Another Cypress task compares the actual screenshot to the baseline using pixelmatch.
-3. **Diff**: If the difference exceeds the threshold, the test fails and a diff image is saved.
+3. **Diff**: If the actual difference greater then expected, the test fails and a diff image is saved.
 
 ---
 
@@ -94,13 +93,13 @@ cypress-task-amazon/
    Use the scripts above to run specific suites or all in parallel.
 
 3. **Review Diff Images:**
-   If a visual test fails, check `e2e/data/temp/diff/` for the generated diff image.
+   If a visual test fails, check `cypress/screenshots/<test name>/diff` for the generated diff image.
 
 ---
 
 ## Extending the Project
 
-- Add new suites and test files under `e2e/suites/` and `e2e/cart_flow/` or `e2e/customer_service/`.
+- Add new suites and test files under `e2e/suites/` and `e2e/tests/cart_flow/` or `e2e/tests/customer_service/`.
 - Add new utility functions and commands to `e2e/utils/functionals.js` or `e2e/utils/commands.js`.
 - Add new custom tasks to `cypress.config.js` as needed.
 
