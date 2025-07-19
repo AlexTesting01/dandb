@@ -40,7 +40,7 @@ Preconditions:
 
 Test Cases:
 
-    Test Case 1: Verify Checkout Flow, User Login, and Visual Integrity of Cart Content
+    Test Case 1: Verify Checkout Flow, User Login, and Cart Content
 
         Objective: To ensure a user can successfully navigate the checkout and login process, visually validate the cart's content after login, and confirm the presence of all expected items.
 
