@@ -6,3 +6,6 @@ export const DELETE_BUTTONS = ".sc-action-delete-active input";
 export const YGB_COLOR_ITEM = "//*[@alt='Yellow, Grey, Blue']//ancestor::span/input";
 export const CART_ITEM_IMAGE = "#sc-cart-column";
 export const CART_COUNT = "#nav-cart-count";
+export const PROCEESD_CHECKOUT = "#sc-buy-box-ptc-button";
+export const APP_EMAIL_USER = "#ap_email_login";
+export const APP_EMAIL_PASSWORD = "#ap_password";

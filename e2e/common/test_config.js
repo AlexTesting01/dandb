@@ -15,3 +15,6 @@ export const QUICK_SOLUTIONS = [
   "Payment Settings",
   "Carrier Info"
 ];
+export const TEST_USER = Cypress.env('TEST_USER') || 'abraslik.testing@gmail.com';
+export const TEST_PASSWORD = Cypress.env('TEST_PASSWORD') || '123456';
+export const TEST_ITEMS = ["Bostitch", "Scissors"];

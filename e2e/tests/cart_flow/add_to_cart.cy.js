@@ -10,7 +10,7 @@ import {
   YGB_COLOR_ITEM,
   CART_ITEM_IMAGE,
 } from "./helpers/cart_selectors.js";
-import { URL } from "../../common/test_config.js";
+import { URL, TEST_ITEMS } from "../../common/test_config.js";
 import {
   clickUntilGone,
   compareScreenshots,
@@ -67,10 +67,13 @@ describe("Amazon Cart Management Suite", () => {
       });
   });
 
-  it("verify both products are in the cart", () => {
+  require("./checkout_cart.cy.js");
+
+  it("verify both products are in the cart when user logout", () => {
     cy.visit(CART_URL);
-    cy.contains("Bostitch").should("exist");
-    cy.contains("Scissors").should("exist");
+     TEST_ITEMS.forEach((item) => {
+    cy.contains(item).should("exist");
+  });
   });
 
   it("verify cart content by screenshot comparing", () => {

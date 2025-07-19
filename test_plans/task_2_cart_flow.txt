@@ -40,7 +40,23 @@ Preconditions:
 
 Test Cases:
 
-    Test Case 1: Verify Both Products are in the Cart
+    Test Case 1: Verify Checkout Flow, User Login, and Visual Integrity of Cart Content
+
+        Objective: To ensure a user can successfully navigate the checkout and login process, visually validate the cart's content after login, and confirm the presence of all expected items.
+
+            Steps:
+
+                1. The checkout process is initiated from a logged-out state.
+
+                2. User credentials (TEST_USER, TEST_PASSWORD) are entered to perform a login.
+
+                3. Successful login is verified by the appearance of the delivery address form.
+
+                4. The user navigates back to the main shopping cart page.
+
+                8. All items listed in TEST_ITEMS are verified to be present in the cart after login.
+
+    Test Case 2: Verify Both Products are in the Cart (in logout state)
         Objective: To confirm that the previously added "Office Personal Electric Pencil Sharpener, Powerful Stall-Free Motor, High Capacity Shavings Tray, Blue" (identified by its brand, "Bostitch") and "Scissors" are correctly displayed within the shopping cart.
             Steps:
 
@@ -50,7 +66,7 @@ Test Cases:
 
                 3. The presence of "Scissors" text is verified on the cart page.
 
-    Test Case 2: Verify Cart content by Screenshot Comparing
+    Test Case 3: Verify Cart content by Screenshot Comparing
         Objective: To visually verify that the cart items appear as expected, using image comparison against a stored baseline.
             Steps:
 
@@ -64,7 +80,7 @@ Test Cases:
 
                 5.The test passes if the visual difference between the captured and baseline screenshot is within an acceptable threshold and diff count.
 
-    Test Case 3: Verify Free Shipping Availability After Adding More Items
+    Test Case 4: Verify Free Shipping Availability After Adding More Items
         Objective: To validate that the free shipping qualification status updates correctly in the cart when item quantities are increased after setting a specific delivery location.
             Steps:
 

@@ -23,7 +23,8 @@ cypress-task-amazon/
 |   │   │   ├── main_menu.cy.js              # Main menu tests
 |   │   │   └── track_package.cy.js          # Track package tests
 |   │   └── cart_flow/
-|   │       └── add_to_cart.cy.js            # Cart management tests
+|   │       ├── add_to_cart.cy.js            # Add to cart management tests
+|   |       └── checkout_cart.cy.js          # Checkout and login tests
 │   ├── common/
 │   │   └── test_config.js                   # Shared constants
 │   ├── utils/

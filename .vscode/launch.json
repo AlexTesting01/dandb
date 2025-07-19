@@ -1,15 +1,23 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
-        {
+       {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/e2e/cart_flow/add_to_cart.cy.js"
+            "name": "1. Start Cypress Test Runner",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "test:cart", // This is the npm script name
+                "--",        // This separates npm args from script args
+                "--user=abraslik.testing@gmail", // Argument 1 for the 'test:cart' script
+                "--password=12345"               // Argument 2 for the 'test:cart' script
+            ],
+            "console": "integratedTerminal",
+            "stopOnEntry": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
         }
     ]
 }

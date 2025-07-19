@@ -1,6 +1,6 @@
-import { openPage } from "../utils/functionals.js";
-import { MAIN_MENU_ITEMS, URL } from "../common/test_config.js";
-import "../utils/commands.js";
+import { openPage } from "../../utils/functionals.js";
+import { MAIN_MENU_ITEMS, URL } from "../../common/test_config.js";
+import "../../utils/commands.js";
 
 describe("Amazon Main Menu Test", () => {
   beforeEach(() => {
